@@ -9,7 +9,6 @@
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
     var items = Items()
@@ -17,33 +16,53 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationBar.topItem?.title = "List".localized()
-        navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem.init(title: "Add".localized(), style: .done, target: self, action: #selector(self.addItem(sender:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Add".localized(), style: .done, target: self, action: #selector(self.addItem(sender:)))
+        
+        self.title = "List".localized()
         
         initTable()
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        reloadTable()
+    }
+    
     func initTable() {
         tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "listCell")
         
+        reloadTable()
+    }
+    
+    func reloadTable() {
         items.loadList()
-        
-//        items.addItem("aaa")
-//        items.addItem("bbb")
+        tableView.reloadData()
     }
     
     @objc func addItem(sender: AnyObject) {
-        print("add")
-        
+        guard let nc = self.navigationController else {
+            return
+        }
         let vc = ListEditViewController()
-        let nc = self.navigationController
-        
-        
-        print("add")
+        nc.pushViewController(vc, animated: true)
     }
 
 // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = items.list[indexPath.row]
+        let name = selectedItem.name
+        
+        guard let nc = self.navigationController else {
+            return
+        }
+        let vc = ListEditViewController()
+        vc.setup(name: name, index: indexPath.row)
+        
+        nc.pushViewController(vc, animated: true)
+    }
     
 // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

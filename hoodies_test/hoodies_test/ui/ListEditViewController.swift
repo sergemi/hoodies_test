@@ -16,6 +16,7 @@ class ListEditViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     
     var editIndex: Int = -1
+    var initialName: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +28,63 @@ class ListEditViewController: UIViewController {
         revertBtn.setTitle("Revert".localized(), for: .normal)
         revertBtn.setTitle("Revert".localized(), for: .highlighted)
         
-        backBtn.setTitle("Back".localized(), for: .normal)
-        backBtn.setTitle("Back".localized(), for: .highlighted)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+        title: "Back".localized(), style: .plain, target: self, action: #selector(ListEditViewController.onBack(sender:)))
+        
+        nameTField.text = initialName
+        
+        updateDoneAvailability()
+    }
+    
+    func setup(name: String, index:Int = -1) {
+        editIndex = index
+        initialName = name
     }
 
     @IBAction func onDone(_ sender: Any) {
-        print("onDone")
+        if editIndex == -1 {
+            addNew()
+        }
+        else {
+            editCurrent()
+        }
+        
+        goBack()
     }
     
     @IBAction func onRevert(_ sender: Any) {
-        print("onRevert")
+        goBack()
     }
     
-    @IBAction func onBack(_ sender: Any) {
+    @IBAction func onNameChanged(_ sender: Any) {
+        updateDoneAvailability()
+    }
+    
+    
+    @objc func onBack(sender: UIBarButtonItem) {
         print("onBack")
+        
+        goBack()
+    }
+    
+    func goBack() {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    func updateDoneAvailability() {
+        doneBtn.isEnabled = nameTField.text != initialName
+    }
+    
+    func addNew() {
+        let items = Items()
+        items.loadList()
+        items.addItem(nameTField.text!)
+    }
+    
+    func editCurrent() {
+        let items = Items()
+        items.loadList()
+        items.changeName(nameTField.text!, index: editIndex)
+        print("editCurrent")
     }
 }

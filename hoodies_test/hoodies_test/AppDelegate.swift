@@ -25,7 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             nibName:"ServiceViewController",
             bundle: nil)
         
-        let controllers = [listViewController, serviceViewController]
+        let listNC = UINavigationController(rootViewController: listViewController)
+        
+//        let controllers = [listViewController, serviceViewController]
+        let controllers = [listNC, serviceViewController]
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = controllers

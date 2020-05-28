@@ -34,7 +34,12 @@ class Items {
         saveList()
     }
     
-    func removeItem(index index: Int) {
+    func changeName(_ name: String, index: Int) {
+        list[index].name = name
+        saveList()
+    }
+    
+    func removeItem(index: Int) {
         if index >= list.count {
             return
         }
