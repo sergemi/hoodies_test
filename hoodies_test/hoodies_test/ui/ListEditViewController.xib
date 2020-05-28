@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListEditViewController" customModule="hoodies_test" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="dZB-Up-oOf" id="aZ9-I9-Eid"/>
+                <outlet property="doneBtn" destination="2ty-Xo-jU2" id="Z8I-53-Biy"/>
+                <outlet property="nameTField" destination="v3f-Lm-9VP" id="nXq-5p-ZRm"/>
+                <outlet property="revertBtn" destination="Kxx-4b-raE" id="oee-aK-FPy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-Lm-9VP" userLabel="nameTField">
+                    <rect key="frame" x="10" y="144" width="394" height="34"/>
+                    <accessibility key="accessibilityConfiguration" hint="Item Name"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ty-Xo-jU2" userLabel="DoneBtn">
+                    <rect key="frame" x="10" y="822" width="192" height="30"/>
+                    <state key="normal" title="DoneBtn"/>
+                    <connections>
+                        <action selector="onDone:" destination="-1" eventType="touchUpInside" id="epO-60-80m"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-4b-raE" userLabel="RevertBtn">
+                    <rect key="frame" x="212" y="822" width="192" height="30"/>
+                    <state key="normal" title="RevertBtn"/>
+                    <connections>
+                        <action selector="onRevert:" destination="-1" eventType="touchUpInside" id="YIz-ez-0oF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-Up-oOf" userLabel="backBtn">
+                    <rect key="frame" x="10" y="54" width="57" height="30"/>
+                    <state key="normal" title="backBtn"/>
+                    <connections>
+                        <action selector="onBack:" destination="-1" eventType="touchUpInside" id="1xZ-pz-Yoz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kxx-4b-raE" secondAttribute="trailing" constant="10" id="A2O-EC-lwm"/>
+                <constraint firstItem="Kxx-4b-raE" firstAttribute="width" secondItem="2ty-Xo-jU2" secondAttribute="width" id="ATo-Cl-jFf"/>
+                <constraint firstItem="dZB-Up-oOf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="HlX-JD-cNd"/>
+                <constraint firstItem="2ty-Xo-jU2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="OOB-wn-RaF"/>
+                <constraint firstItem="v3f-Lm-9VP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="SPJ-bv-cwz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2ty-Xo-jU2" secondAttribute="bottom" constant="10" id="UK1-Om-D2q"/>
+                <constraint firstItem="Kxx-4b-raE" firstAttribute="leading" secondItem="2ty-Xo-jU2" secondAttribute="trailing" constant="10" id="YXs-8m-bsr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kxx-4b-raE" secondAttribute="bottom" constant="10" id="c9r-wW-LUF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v3f-Lm-9VP" secondAttribute="trailing" constant="10" id="d0r-eB-4ka"/>
+                <constraint firstItem="v3f-Lm-9VP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="fat-fX-wvR"/>
+                <constraint firstItem="dZB-Up-oOf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="x38-VE-dv0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="151"/>
+        </view>
+    </objects>
+</document>

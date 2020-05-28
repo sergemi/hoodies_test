@@ -35,6 +35,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func addItem(sender: AnyObject) {
         print("add")
+        
+        let vc = ListEditViewController()
+        let nc = self.navigationController
+        
+        
+        print("add")
     }
 
 // MARK: - UITableViewDelegate

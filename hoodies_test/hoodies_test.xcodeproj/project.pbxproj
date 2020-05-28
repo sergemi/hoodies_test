@@ -21,6 +21,8 @@
 		8F76DEB7247EE8C2004FDD52 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DEB5247EE8C2004FDD52 /* ListTableViewCell.xib */; };
 		8F76DEBA247F97BB004FDD52 /* listItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEB9247F97BB004FDD52 /* listItem.swift */; };
 		8F76DEBC247F9830004FDD52 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEBB247F9830004FDD52 /* Items.swift */; };
+		8F76DEC1247FB424004FDD52 /* ListEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEBF247FB424004FDD52 /* ListEditViewController.swift */; };
+		8F76DEC2247FB424004FDD52 /* ListEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DEC0247FB424004FDD52 /* ListEditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		8F76DEB5247EE8C2004FDD52 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		8F76DEB9247F97BB004FDD52 /* listItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listItem.swift; sourceTree = "<group>"; };
 		8F76DEBB247F9830004FDD52 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		8F76DEBF247FB424004FDD52 /* ListEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEditViewController.swift; sourceTree = "<group>"; };
+		8F76DEC0247FB424004FDD52 /* ListEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				8F76DE9A247E8586004FDD52 /* ListViewController.xib */,
 				8F76DE9D247E85B8004FDD52 /* ServiceViewController.swift */,
 				8F76DE9E247E85B8004FDD52 /* ServiceViewController.xib */,
+				8F76DEBF247FB424004FDD52 /* ListEditViewController.swift */,
+				8F76DEC0247FB424004FDD52 /* ListEditViewController.xib */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 				8F76DE86247E74D5004FDD52 /* Assets.xcassets in Resources */,
 				8F76DEA0247E85B8004FDD52 /* ServiceViewController.xib in Resources */,
 				8F76DE9C247E8586004FDD52 /* ListViewController.xib in Resources */,
+				8F76DEC2247FB424004FDD52 /* ListEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +204,7 @@
 				8F76DE9B247E8586004FDD52 /* ListViewController.swift in Sources */,
 				8F76DEBA247F97BB004FDD52 /* listItem.swift in Sources */,
 				8F76DE9F247E85B8004FDD52 /* ServiceViewController.swift in Sources */,
+				8F76DEC1247FB424004FDD52 /* ListEditViewController.swift in Sources */,
 				8F76DE7D247E74D4004FDD52 /* AppDelegate.swift in Sources */,
 				8F76DEAF247EB5A1004FDD52 /* String+localized.swift in Sources */,
 				8F76DEB6247EE8C2004FDD52 /* ListTableViewCell.swift in Sources */,

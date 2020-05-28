@@ -35,7 +35,6 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kEF-TG-5JP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="08E-w8-6tG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kEF-TG-5JP" secondAttribute="trailing" id="98H-DS-LxU"/>
