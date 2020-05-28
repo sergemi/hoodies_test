@@ -40,15 +40,18 @@ class ListEditViewController: UIViewController {
         editIndex = index
         initialName = name
     }
-
-    @IBAction func onDone(_ sender: Any) {
+    
+    func saveChanges() {
         if editIndex == -1 {
             addNew()
         }
         else {
             editCurrent()
         }
-        
+    }
+
+    @IBAction func onDone(_ sender: Any) {
+        saveChanges()
         goBack()
     }
     
@@ -62,9 +65,26 @@ class ListEditViewController: UIViewController {
     
     
     @objc func onBack(sender: UIBarButtonItem) {
-        print("onBack")
-        
-        goBack()
+        if nameTField.text != initialName {
+            let alert = UIAlertController(title: "Data changed".localized(),
+                                          message: "Save changes?".localized(),
+                                          preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Yes".localized(), style: .default, handler: { [weak self] (action: UIAlertAction!) in
+                self?.saveChanges()
+                self?.goBack()
+              }))
+
+
+            alert.addAction(UIAlertAction(title: "No".localized(), style: .cancel, handler: { [weak self] (action: UIAlertAction!) in
+                self?.goBack()
+              }))
+
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            goBack()
+        }
     }
     
     func goBack() {
@@ -85,6 +105,5 @@ class ListEditViewController: UIViewController {
         let items = Items()
         items.loadList()
         items.changeName(nameTField.text!, index: editIndex)
-        print("editCurrent")
     }
 }
