@@ -8,23 +8,48 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
-
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var items = Items()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationBar.topItem?.title = "List".localized()
+        navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem.init(title: "Add".localized(), style: .done, target: self, action: #selector(self.addItem(sender:)))
+        
+        initTable()
+
+    }
+    
+    func initTable() {
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "listCell")
+        
+        items.loadList()
+        
+//        items.addItem("aaa")
+//        items.addItem("bbb")
+    }
+    
+    @objc func addItem(sender: AnyObject) {
+        print("add")
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - UITableViewDelegate
+    
+// MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.list.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListTableViewCell
+        
+        let cellData = items.list[indexPath.row]
+        cell.setupFromItem(cellData)
+        return cell
+    }
 
 }

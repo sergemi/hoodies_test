@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="hoodies_test" customModuleProvider="target">
             <connections>
+                <outlet property="navigationBar" destination="Pjz-SK-ddt" id="EjV-Q3-ZKc"/>
+                <outlet property="tableView" destination="kEF-TG-5JP" id="eyS-J3-QFB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +19,32 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="List">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjz-SK-ddt">
+                    <rect key="frame" x="0.0" y="37" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="List" id="L6F-YJ-792" userLabel="List"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kEF-TG-5JP">
+                    <rect key="frame" x="0.0" y="81" width="414" height="781"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6nO-Pi-IVS"/>
+                        <outlet property="delegate" destination="-1" id="USX-Yl-StP"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kEF-TG-5JP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="08E-w8-6tG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kEF-TG-5JP" secondAttribute="trailing" id="98H-DS-LxU"/>
+                <constraint firstItem="Pjz-SK-ddt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9NF-3A-Qfo"/>
+                <constraint firstItem="Pjz-SK-ddt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BWe-j3-4KT"/>
+                <constraint firstItem="kEF-TG-5JP" firstAttribute="top" secondItem="Pjz-SK-ddt" secondAttribute="bottom" id="DDy-RK-mSc"/>
+                <constraint firstItem="Pjz-SK-ddt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="KpJ-Dd-NWO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kEF-TG-5JP" secondAttribute="bottom" id="PiH-5A-kUt"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="151"/>
         </view>

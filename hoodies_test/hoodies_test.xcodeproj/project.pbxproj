@@ -17,6 +17,10 @@
 		8F76DEA0247E85B8004FDD52 /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DE9E247E85B8004FDD52 /* ServiceViewController.xib */; };
 		8F76DEA8247EB334004FDD52 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DEAA247EB334004FDD52 /* Localizable.strings */; };
 		8F76DEAF247EB5A1004FDD52 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEAE247EB5A1004FDD52 /* String+localized.swift */; };
+		8F76DEB6247EE8C2004FDD52 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEB4247EE8C2004FDD52 /* ListTableViewCell.swift */; };
+		8F76DEB7247EE8C2004FDD52 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DEB5247EE8C2004FDD52 /* ListTableViewCell.xib */; };
+		8F76DEBA247F97BB004FDD52 /* listItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEB9247F97BB004FDD52 /* listItem.swift */; };
+		8F76DEBC247F9830004FDD52 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEBB247F9830004FDD52 /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		8F76DEA9247EB334004FDD52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F76DEAB247EB345004FDD52 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F76DEAE247EB5A1004FDD52 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		8F76DEB4247EE8C2004FDD52 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		8F76DEB5247EE8C2004FDD52 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		8F76DEB9247F97BB004FDD52 /* listItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listItem.swift; sourceTree = "<group>"; };
+		8F76DEBB247F9830004FDD52 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,10 @@
 		8F76DE7B247E74D4004FDD52 /* hoodies_test */ = {
 			isa = PBXGroup;
 			children = (
+				8F76DEB8247F9791004FDD52 /* models */,
 				8F76DEAD247EB530004FDD52 /* helpers */,
 				8F76DEAA247EB334004FDD52 /* Localizable.strings */,
-				8F76DE98247E8484004FDD52 /* screens */,
+				8F76DE98247E8484004FDD52 /* ui */,
 				8F76DE7C247E74D4004FDD52 /* AppDelegate.swift */,
 				8F76DE80247E74D4004FDD52 /* ViewController.swift */,
 				8F76DE85247E74D5004FDD52 /* Assets.xcassets */,
@@ -78,23 +87,34 @@
 			path = hoodies_test;
 			sourceTree = "<group>";
 		};
-		8F76DE98247E8484004FDD52 /* screens */ = {
+		8F76DE98247E8484004FDD52 /* ui */ = {
 			isa = PBXGroup;
 			children = (
 				8F76DE99247E8586004FDD52 /* ListViewController.swift */,
+				8F76DEB4247EE8C2004FDD52 /* ListTableViewCell.swift */,
+				8F76DEB5247EE8C2004FDD52 /* ListTableViewCell.xib */,
 				8F76DE9A247E8586004FDD52 /* ListViewController.xib */,
 				8F76DE9D247E85B8004FDD52 /* ServiceViewController.swift */,
 				8F76DE9E247E85B8004FDD52 /* ServiceViewController.xib */,
 			);
-			path = screens;
+			path = ui;
 			sourceTree = "<group>";
 		};
 		8F76DEAD247EB530004FDD52 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
 				8F76DEAE247EB5A1004FDD52 /* String+localized.swift */,
+				8F76DEBB247F9830004FDD52 /* Items.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		8F76DEB8247F9791004FDD52 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8F76DEB9247F97BB004FDD52 /* listItem.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F76DE89247E74D5004FDD52 /* LaunchScreen.storyboard in Resources */,
+				8F76DEB7247EE8C2004FDD52 /* ListTableViewCell.xib in Resources */,
 				8F76DEA8247EB334004FDD52 /* Localizable.strings in Resources */,
 				8F76DE86247E74D5004FDD52 /* Assets.xcassets in Resources */,
 				8F76DEA0247E85B8004FDD52 /* ServiceViewController.xib in Resources */,
@@ -171,11 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F76DEBC247F9830004FDD52 /* Items.swift in Sources */,
 				8F76DE81247E74D4004FDD52 /* ViewController.swift in Sources */,
 				8F76DE9B247E8586004FDD52 /* ListViewController.swift in Sources */,
+				8F76DEBA247F97BB004FDD52 /* listItem.swift in Sources */,
 				8F76DE9F247E85B8004FDD52 /* ServiceViewController.swift in Sources */,
 				8F76DE7D247E74D4004FDD52 /* AppDelegate.swift in Sources */,
 				8F76DEAF247EB5A1004FDD52 /* String+localized.swift in Sources */,
+				8F76DEB6247EE8C2004FDD52 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
