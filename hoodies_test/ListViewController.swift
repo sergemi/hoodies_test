@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol ListViewControllerDelegate {
+    func changeCheckedState(checked: Bool, index: Int)
+}
+
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ListViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var items = Items()
@@ -100,7 +104,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cellData = items.list[indexPath.row]
         cell.setupFromItem(cellData)
+        cell.listViewControllerDelegate = self
+        cell.rowIndex = indexPath.row
+        
         return cell
     }
+    
+// MARK: - ListViewControllerDelegate
 
+    func changeCheckedState(checked: Bool, index: Int) {
+        items.list[index].checked = checked
+        items.saveList()
+    }
 }

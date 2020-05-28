@@ -13,6 +13,9 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var nameLbl: UILabel!
     
+    var listViewControllerDelegate: ListViewControllerDelegate? = nil
+    var rowIndex: Int = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -37,6 +40,7 @@ class ListTableViewCell: UITableViewCell {
     
     @IBAction func onCheckBox(_ sender: Any) {
         checkBox.isSelected = !checkBox.isSelected
+        listViewControllerDelegate?.changeCheckedState(checked: checkBox.isSelected, index: rowIndex)
         updateChecked()
     }
     
