@@ -41,6 +41,25 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
     
+    func editRow(index: Int) {
+        let selectedItem = items.list[index]
+        let name = selectedItem.name
+        
+        guard let nc = self.navigationController else {
+            return
+        }
+        let vc = ListEditViewController()
+        vc.setup(name: name, index: index)
+        
+        nc.pushViewController(vc, animated: true)
+    }
+    
+    func deleteRow(index: Int) {
+        items.removeItem(index: index)
+        items.saveList()
+        tableView.reloadData()
+    }
+    
     @objc func addItem(sender: AnyObject) {
         guard let nc = self.navigationController else {
             return
@@ -52,16 +71,23 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = items.list[indexPath.row]
-        let name = selectedItem.name
-        
-        guard let nc = self.navigationController else {
-            return
+        editRow(index: indexPath.row)
+    }
+    
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (action, view, handler) in
+            self?.editRow(index: indexPath.row)
         }
-        let vc = ListEditViewController()
-        vc.setup(name: name, index: indexPath.row)
         
-        nc.pushViewController(vc, animated: true)
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, handler) in
+            self?.deleteRow(index: indexPath.row)
+        }
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
     }
     
 // MARK: - UITableViewDataSource
