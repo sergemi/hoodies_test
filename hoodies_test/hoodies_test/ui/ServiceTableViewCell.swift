@@ -48,4 +48,13 @@ class ServiceTableViewCell: UITableViewCell {
         yearLbl.text = "yearLbl".localized()
     }
     
+    func setup(_ item: CDItem) {
+        titleTField.text = item.title
+        artistTField.text = item.artist
+        countryTField.text = item.country
+        priceTField.text = item.price
+        companyTField.text = item.company
+        yearTField.text = item.year
+    }
+    
 }

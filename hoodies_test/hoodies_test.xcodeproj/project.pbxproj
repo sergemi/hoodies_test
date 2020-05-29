@@ -25,6 +25,8 @@
 		8F76DEC2247FB424004FDD52 /* ListEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DEC0247FB424004FDD52 /* ListEditViewController.xib */; };
 		8F76DEC52480EEEB004FDD52 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEC32480EEEB004FDD52 /* ServiceTableViewCell.swift */; };
 		8F76DEC62480EEEB004FDD52 /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F76DEC42480EEEB004FDD52 /* ServiceTableViewCell.xib */; };
+		8F76DEC824810DE1004FDD52 /* CDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEC724810DE0004FDD52 /* CDItem.swift */; };
+		8F76DECA24810FB8004FDD52 /* CDmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76DEC924810FB7004FDD52 /* CDmanager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		8F76DEC0247FB424004FDD52 /* ListEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEditViewController.xib; sourceTree = "<group>"; };
 		8F76DEC32480EEEB004FDD52 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		8F76DEC42480EEEB004FDD52 /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		8F76DEC724810DE0004FDD52 /* CDItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDItem.swift; sourceTree = "<group>"; };
+		8F76DEC924810FB7004FDD52 /* CDmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDmanager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				8F76DEAE247EB5A1004FDD52 /* String+localized.swift */,
 				8F76DEBB247F9830004FDD52 /* Items.swift */,
+				8F76DEC924810FB7004FDD52 /* CDmanager.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8F76DEB9247F97BB004FDD52 /* listItem.swift */,
+				8F76DEC724810DE0004FDD52 /* CDItem.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 				8F76DEC1247FB424004FDD52 /* ListEditViewController.swift in Sources */,
 				8F76DE7D247E74D4004FDD52 /* AppDelegate.swift in Sources */,
 				8F76DEC52480EEEB004FDD52 /* ServiceTableViewCell.swift in Sources */,
+				8F76DECA24810FB8004FDD52 /* CDmanager.swift in Sources */,
+				8F76DEC824810DE1004FDD52 /* CDItem.swift in Sources */,
 				8F76DEAF247EB5A1004FDD52 /* String+localized.swift in Sources */,
 				8F76DEB6247EE8C2004FDD52 /* ListTableViewCell.swift in Sources */,
 			);
