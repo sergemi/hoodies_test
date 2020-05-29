@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             bundle: nil)
         
         let listNC = UINavigationController(rootViewController: listViewController)
+        let serviceNC = UINavigationController(rootViewController: serviceViewController)
         
-//        let controllers = [listViewController, serviceViewController]
-        let controllers = [listNC, serviceViewController]
+        let controllers = [listNC, serviceNC]
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = controllers

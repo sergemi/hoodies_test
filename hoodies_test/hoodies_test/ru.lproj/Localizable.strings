@@ -19,5 +19,13 @@
 "Save changes?" = "Сохранить изменения?";
 "Yes" = "Да";
 "No" = "Нет";
+"CurrencyPostfix" = "$";
 
+// service cell
+"titleLbl" = "Название";
+"artistLbl" = "Артист";
+"countryLbl" = "Страна";
+"companyLbl" = "Компания";
+"priceLbl" = "Цена";
+"yearLbl" = "Год";
 

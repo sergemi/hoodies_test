@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="serviceCell" rowHeight="157" id="KGk-i7-Jjw" customClass="ServiceTableViewCell" customModule="hoodies_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-6w-z0t">
+                        <rect key="frame" x="2" y="8" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5Q-lw-wc0" userLabel="titleTField">
+                        <rect key="frame" x="67" y="1.5" width="257" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot2-nb-buy">
+                        <rect key="frame" x="2" y="44" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EbC-kV-tzz" userLabel="artistTField">
+                        <rect key="frame" x="67" y="37.5" width="257" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-a9-iJx">
+                        <rect key="frame" x="2" y="80" width="93.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzr-TC-Lbv" userLabel="countryTField">
+                        <rect key="frame" x="97.5" y="73.5" width="126.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5X-st-G5V">
+                        <rect key="frame" x="228" y="80" width="62" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eow-KS-aUZ" userLabel="priceTField">
+                        <rect key="frame" x="292" y="73.5" width="32" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="companyLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFC-KH-c4g">
+                        <rect key="frame" x="2" y="116" width="93.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBk-pk-MdB" userLabel="companyTField">
+                        <rect key="frame" x="97.5" y="109.5" width="126.5" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yearLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJH-gk-j5I">
+                        <rect key="frame" x="228" y="116" width="62" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lY3-RG-k8l" userLabel="yearTField">
+                        <rect key="frame" x="292" y="109.5" width="32" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5f-2A-PJ3" userLabel="bottomLine">
+                        <rect key="frame" x="2" y="151" width="322" height="4"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="lLL-LP-n2z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rBk-pk-MdB" firstAttribute="leading" secondItem="HFC-KH-c4g" secondAttribute="trailing" constant="2" id="0cd-6m-ZCs"/>
+                    <constraint firstItem="i5X-st-G5V" firstAttribute="leading" secondItem="vzr-TC-Lbv" secondAttribute="trailing" constant="4" id="0hn-Qt-aCL"/>
+                    <constraint firstAttribute="trailing" secondItem="EbC-kV-tzz" secondAttribute="trailing" constant="2" id="4li-92-O2L"/>
+                    <constraint firstItem="CSI-a9-iJx" firstAttribute="leading" secondItem="Ot2-nb-buy" secondAttribute="leading" id="6B1-GU-IbG"/>
+                    <constraint firstItem="Ot2-nb-buy" firstAttribute="leading" secondItem="Bhd-6w-z0t" secondAttribute="leading" id="6iz-7Y-lPP"/>
+                    <constraint firstItem="HFC-KH-c4g" firstAttribute="leading" secondItem="Bhd-6w-z0t" secondAttribute="leading" id="AjP-V5-Rox"/>
+                    <constraint firstItem="fJH-gk-j5I" firstAttribute="leading" secondItem="rBk-pk-MdB" secondAttribute="trailing" constant="4" id="BG5-yh-FGx"/>
+                    <constraint firstItem="lY3-RG-k8l" firstAttribute="leading" secondItem="fJH-gk-j5I" secondAttribute="trailing" constant="2" id="ESN-qg-WHz"/>
+                    <constraint firstItem="HFC-KH-c4g" firstAttribute="top" secondItem="CSI-a9-iJx" secondAttribute="bottom" constant="15" id="Fos-dO-y9s"/>
+                    <constraint firstItem="EbC-kV-tzz" firstAttribute="centerY" secondItem="Ot2-nb-buy" secondAttribute="centerY" id="GWs-05-KHr"/>
+                    <constraint firstItem="EbC-kV-tzz" firstAttribute="leading" secondItem="Ot2-nb-buy" secondAttribute="trailing" constant="2" id="HIa-eK-O0x"/>
+                    <constraint firstItem="eow-KS-aUZ" firstAttribute="centerY" secondItem="CSI-a9-iJx" secondAttribute="centerY" id="Kpa-K3-7Yy"/>
+                    <constraint firstItem="U5Q-lw-wc0" firstAttribute="centerY" secondItem="Bhd-6w-z0t" secondAttribute="centerY" id="KxY-N3-aJi"/>
+                    <constraint firstItem="Ot2-nb-buy" firstAttribute="top" secondItem="Bhd-6w-z0t" secondAttribute="bottom" constant="15" id="Oxn-u5-OqN"/>
+                    <constraint firstItem="Ot2-nb-buy" firstAttribute="width" secondItem="Bhd-6w-z0t" secondAttribute="width" id="WDZ-Bw-YUY"/>
+                    <constraint firstAttribute="trailing" secondItem="lY3-RG-k8l" secondAttribute="trailing" constant="2" id="XEX-42-Dfs"/>
+                    <constraint firstItem="U5Q-lw-wc0" firstAttribute="leading" secondItem="Bhd-6w-z0t" secondAttribute="trailing" constant="2" id="ak9-xA-iYm"/>
+                    <constraint firstItem="vzr-TC-Lbv" firstAttribute="centerY" secondItem="CSI-a9-iJx" secondAttribute="centerY" id="ar3-J5-Cyo"/>
+                    <constraint firstItem="eow-KS-aUZ" firstAttribute="leading" secondItem="i5X-st-G5V" secondAttribute="trailing" constant="2" id="bKo-rU-u8q"/>
+                    <constraint firstItem="vzr-TC-Lbv" firstAttribute="leading" secondItem="CSI-a9-iJx" secondAttribute="trailing" constant="2" id="cDr-70-riP"/>
+                    <constraint firstAttribute="trailing" secondItem="eow-KS-aUZ" secondAttribute="trailing" constant="2" id="cLO-Jj-Ldr"/>
+                    <constraint firstAttribute="bottom" secondItem="R5f-2A-PJ3" secondAttribute="bottom" constant="2" id="eEM-Xn-Vxs"/>
+                    <constraint firstItem="fJH-gk-j5I" firstAttribute="width" secondItem="i5X-st-G5V" secondAttribute="width" id="ffo-vq-PtS"/>
+                    <constraint firstItem="CSI-a9-iJx" firstAttribute="top" secondItem="Ot2-nb-buy" secondAttribute="bottom" constant="15" id="ftv-by-kaE"/>
+                    <constraint firstItem="lY3-RG-k8l" firstAttribute="centerY" secondItem="HFC-KH-c4g" secondAttribute="centerY" id="hcA-Fz-qiV"/>
+                    <constraint firstItem="Bhd-6w-z0t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="jPD-7e-X9Q"/>
+                    <constraint firstItem="Bhd-6w-z0t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kaU-Ol-U7L"/>
+                    <constraint firstAttribute="trailing" secondItem="U5Q-lw-wc0" secondAttribute="trailing" constant="2" id="liv-cU-oLa"/>
+                    <constraint firstAttribute="trailing" secondItem="R5f-2A-PJ3" secondAttribute="trailing" constant="2" id="mkP-Vk-Wkq"/>
+                    <constraint firstItem="R5f-2A-PJ3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="nHr-2W-3Pe"/>
+                    <constraint firstItem="fJH-gk-j5I" firstAttribute="centerY" secondItem="HFC-KH-c4g" secondAttribute="centerY" id="nr8-On-uXe"/>
+                    <constraint firstItem="rBk-pk-MdB" firstAttribute="centerY" secondItem="HFC-KH-c4g" secondAttribute="centerY" id="pkl-V3-aHI"/>
+                    <constraint firstItem="HFC-KH-c4g" firstAttribute="width" secondItem="CSI-a9-iJx" secondAttribute="width" id="sQ7-1W-hef"/>
+                    <constraint firstItem="i5X-st-G5V" firstAttribute="centerY" secondItem="CSI-a9-iJx" secondAttribute="centerY" id="zIN-Ne-c5z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistLbl" destination="Ot2-nb-buy" id="cqR-xn-8lm"/>
+                <outlet property="artistTField" destination="EbC-kV-tzz" id="eAT-9M-GkO"/>
+                <outlet property="companyLbl" destination="HFC-KH-c4g" id="b7b-67-8Oz"/>
+                <outlet property="companyTField" destination="rBk-pk-MdB" id="FQu-bp-dRw"/>
+                <outlet property="countryLbl" destination="CSI-a9-iJx" id="2ui-6I-Fug"/>
+                <outlet property="countryTField" destination="vzr-TC-Lbv" id="cx2-U2-pba"/>
+                <outlet property="priceLbl" destination="i5X-st-G5V" id="AAt-qT-IMs"/>
+                <outlet property="priceTField" destination="eow-KS-aUZ" id="Tbn-29-vfC"/>
+                <outlet property="titleLbl" destination="Bhd-6w-z0t" id="S3n-Ky-k7m"/>
+                <outlet property="titleTField" destination="U5Q-lw-wc0" id="hET-8H-PdS"/>
+                <outlet property="yearLbl" destination="fJH-gk-j5I" id="GVN-Te-cfa"/>
+                <outlet property="yearTField" destination="lY3-RG-k8l" id="pJO-7M-Frx"/>
+            </connections>
+            <point key="canvasLocation" x="144.92753623188406" y="188.50446428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

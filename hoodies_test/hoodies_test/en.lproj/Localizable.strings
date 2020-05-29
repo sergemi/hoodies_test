@@ -19,4 +19,13 @@
 "Save changes?" = "Save changes?";
 "Yes" = "Yes";
 "No" = "No";
+"CurrencyPostfix" = "$";
+
+// service cell
+"titleLbl" = "Title";
+"artistLbl" = "Artist";
+"countryLbl" = "Country";
+"companyLbl" = "Company";
+"priceLbl" = "Price";
+"yearLbl" = "Year";
 

@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController" customModule="hoodies_test" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="dBN-XP-8hv" id="Y89-Rh-mYD"/>
+                <outlet property="tableView" destination="a8X-wU-YsW" id="IlQ-zw-al2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,15 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-QR-XzU">
-                    <rect key="frame" x="0.0" y="34" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Title" id="MZ9-fZ-qzY"/>
-                    </items>
-                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="157" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-wU-YsW" userLabel="tableView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BfZ-zG-K2K"/>
+                        <outlet property="delegate" destination="-1" id="3CU-Af-iLg"/>
+                    </connections>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-XP-8hv" userLabel="activityIndicator">
+                    <rect key="frame" x="197" y="144" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a8X-wU-YsW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JmQ-8L-Bga"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="a8X-wU-YsW" secondAttribute="bottom" id="Nkf-ln-Cjm"/>
+                <constraint firstItem="dBN-XP-8hv" firstAttribute="top" secondItem="a8X-wU-YsW" secondAttribute="top" constant="100" id="Ocb-uW-uot"/>
+                <constraint firstItem="a8X-wU-YsW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZJl-cY-wD4"/>
+                <constraint firstItem="dBN-XP-8hv" firstAttribute="centerX" secondItem="a8X-wU-YsW" secondAttribute="centerX" id="j9e-mr-xvm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a8X-wU-YsW" secondAttribute="trailing" id="ycm-7n-SsL"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="151"/>
         </view>
