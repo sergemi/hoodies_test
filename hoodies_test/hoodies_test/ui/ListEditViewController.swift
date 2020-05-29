@@ -34,6 +34,7 @@ class ListEditViewController: UIViewController {
         nameTField.text = initialName
         
         updateDoneAvailability()
+        nameTField.becomeFirstResponder()
     }
     
     func setup(name: String, index:Int = -1) {
